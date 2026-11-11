@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Наталія Рашевська — UX/UI дизайнерка</title>
+    <meta
+      name="description"
+      content="Створюю зручні цифрові продукти для людей і бізнесу. Портфоліо UX/UI дизайнерки Наталії Рашевської."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap&subset=cyrillic"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo" href="/">НАТАЛІЯ | UX/UI</a>
+      <nav class="nav" aria-label="Основне меню">
+        <a href="#projects">Проекти</a>
+        <a href="#services">Послуги</a>
+        <a href="#about">Про мене</a>
+        <a href="#contacts">Контакти</a>
+        <a class="nav__cta" href="#contacts">Написати</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero__text">
+          <p class="hero__greeting">Привіт, я UX/UI дизайнер</p>
+          <h1 class="hero__title">Створюю зручні цифрові продукти для людей і бізнесу</h1>
+          <p class="hero__lead">
+            Допомагаю малому бізнесу та стартапам створювати й удосконалювати сайти та застосунки,
+            щоб користувачам було простіше досягати своїх цілей, а бізнесу — ефективніше
+            взаємодіяти з клієнтами.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">Мої проекти</a>
+            <a class="btn btn--outline" href="#contacts">Зв’язатись зі мною</a>
+          </div>
+        </div>
+        <div class="hero__photo" role="img" aria-label="Місце для фото">
+          <img src="/images/avatar.svg" alt="" width="89" height="89" />
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <h2 class="projects__title">Мої проекти</h2>
+        <ul class="projects__list">
+          <li class="card card--alerio">
+            <a class="card__link" href="#">
+              <span class="card__preview"
+                ><img src="/images/picture.svg" alt="" width="74" height="74"
+              /></span>
+              <span class="card__name">Alerio</span>
+              <span class="card__type">Мобільний застосунок</span>
+            </a>
+          </li>
+          <li class="card card--estate">
+            <a class="card__link" href="#">
+              <span class="card__preview"
+                ><img src="/images/picture.svg" alt="" width="74" height="74"
+              /></span>
+              <span class="card__name">Real Estate</span>
+              <span class="card__type">Сайт нерухомості</span>
+            </a>
+          </li>
+          <li class="card card--time">
+            <a class="card__link" href="#">
+              <span class="card__preview"
+                ><img src="/images/picture.svg" alt="" width="74" height="74"
+              /></span>
+              <span class="card__name">Prestige Time</span>
+              <span class="card__type">Магазин годинників</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
