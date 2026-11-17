@@ -539,10 +539,9 @@ a {
   list-style: none;
 }
 
-/* Скляні пілюлі з відблиском, що по черзі пробігає по кожній */
+/* Скляні пілюлі-теги: це не кнопки, тому без відблисків і ефектів наведення */
 .skill {
   position: relative;
-  overflow: hidden;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -558,51 +557,6 @@ a {
   font-weight: 600;
   color: var(--ink);
   cursor: default;
-  transition: border-color 0.25s, color 0.25s, background 0.25s, transform 0.25s, box-shadow 0.25s;
-}
-
-.skill::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, 0.85) 50%, rgba(242, 168, 137, 0.35) 56%, transparent 70%);
-  transform: translateX(-130%);
-  pointer-events: none;
-  animation: skill-sheen 6s ease-in-out infinite;
-}
-
-.skill:nth-child(2)::after {
-  animation-delay: 0.6s;
-}
-.skill:nth-child(3)::after {
-  animation-delay: 1.2s;
-}
-.skill:nth-child(4)::after {
-  animation-delay: 1.8s;
-}
-.skill:nth-child(5)::after {
-  animation-delay: 2.4s;
-}
-.skill:nth-child(6)::after {
-  animation-delay: 3s;
-}
-
-@keyframes skill-sheen {
-  0% {
-    transform: translateX(-130%);
-  }
-  30%,
-  100% {
-    transform: translateX(130%);
-  }
-}
-
-.skill:hover {
-  transform: translateY(-2px);
-  border-color: rgba(229, 125, 88, 0.55);
-  color: #b5502f;
-  background: linear-gradient(135deg, rgba(255, 244, 236, 0.9), rgba(249, 215, 197, 0.55));
-  box-shadow: 0 12px 24px rgba(229, 125, 88, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.95);
 }
 
 .skill__icon {
@@ -614,81 +568,6 @@ a {
   stroke-linecap: round;
   stroke-linejoin: round;
   overflow: visible;
-  transition: stroke 0.25s;
-}
-
-.skill:hover .skill__icon {
-  stroke: var(--accent);
-}
-
-.skill__icon * {
-  transform-box: fill-box;
-  transform-origin: center;
-  transition: transform 0.45s cubic-bezier(0.3, 1.4, 0.5, 1), stroke-dashoffset 0.6s ease;
-}
-
-.skill:hover .skill__icon--frame rect {
-  transform: scale(1.18);
-}
-.skill:hover .skill__icon--search {
-  animation: wiggle 0.8s ease;
-}
-.skill:hover .skill__icon--proto rect:last-of-type {
-  transform: translate(-3px, -3px);
-}
-.skill__path {
-  stroke-dasharray: 30;
-}
-.skill:hover .skill__path {
-  animation: draw 0.9s ease;
-}
-.skill:hover .skill__bar {
-  transform: translateY(3px);
-}
-.skill:hover .skill__bar--2 {
-  transform: translateX(-3px);
-}
-.skill:hover .skill__icon--drop {
-  animation: drop 0.8s ease;
-}
-.skill:hover .skill__star {
-  transform: scale(1.18) rotate(12deg);
-}
-.skill:hover .skill__star--2 {
-  transform: scale(0.7);
-}
-
-@keyframes wiggle {
-  0%,
-  100% {
-    transform: rotate(0);
-  }
-  30% {
-    transform: rotate(-14deg);
-  }
-  65% {
-    transform: rotate(10deg);
-  }
-}
-@keyframes draw {
-  from {
-    stroke-dashoffset: 30;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes drop {
-  0%,
-  100% {
-    transform: translateY(0) scale(1);
-  }
-  40% {
-    transform: translateY(-4px) scale(1.08, 0.94);
-  }
-  70% {
-    transform: translateY(1px) scale(0.96, 1.05);
-  }
 }
 
 /* ---------- Анімації появи ---------- */
